@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+{% include 'admin_navbar.html' %}
+<div class="container mt-4">
+  <h1>Welcome, {{ request.user.username }}</h1>
+  <p>This is your admin dashboard.</p>
+</div>
+
+<h3>Welcome, {{ admin.username }}</h3>
+<p><strong>Shop Name:</strong> {{ admin.shop_name }}</p>
+<p><strong>Address:</strong> {{ admin.shop_address }}</p>
+<p><strong>Mobile:</strong> {{ admin.mobile_number }}</p>
+<a href="{% url 'admin_logout' %}" class="btn btn-danger">Logout</a>
+{% endblock %}
+

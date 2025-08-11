@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Create New Admin</h3>
+<form method="POST" class="mt-3">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label>Username</label>
+        <input type="text" name="username" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label>Email</label>
+        <input type="email" name="email" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label>Password</label>
+        <input type="password" name="password" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label>Shop Name</label>
+        <input type="text" name="shop_name" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label>Shop Address</label>
+        <textarea name="shop_address" class="form-control" rows="3" required></textarea>
+    </div>
+    <div class="mb-3">
+        <label>Mobile Number</label>
+        <input type="text" name="mobile_number" class="form-control" required>
+    </div>
+    <button class="btn btn-primary">Create Admin</button>
+</form>
+{% endblock %}

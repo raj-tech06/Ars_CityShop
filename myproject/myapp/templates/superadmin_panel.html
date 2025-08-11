@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="bg-secondary text-white p-3 mb-4">
+    <a href="{% url 'create_admin' %}" class="btn btn-light btn-sm">Create Admin</a>
+    <a href="{% url 'view_admins' %}" class="btn btn-light btn-sm">View All Admin</a>
+    <a href="{% url 'active_admins' %}" class="btn btn-light btn-sm">Active Account</a>
+    <a href="{% url 'superadmin_logout' %}" class="btn btn-danger btn-sm">Logout</a>
+</div>
+
+<h3>Welcome SuperAdmin!</h3>
+<p>Select an option from the menu above.</p>
+{% endblock %}

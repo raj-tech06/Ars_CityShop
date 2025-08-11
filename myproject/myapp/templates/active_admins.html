@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Active Admins</h3>
+<table class="table table-striped mt-3">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Shop Name</th>
+            <th>Mobile</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for admin in admins %}
+        <tr>
+            <td>{{ admin.username }}</td>
+            <td>{{ admin.email }}</td>
+            <td>{{ admin.shop_name }}</td>
+            <td>{{ admin.mobile_number }}</td>
+            <td>
+                {% if admin.is_active %}
+                    ✅ Active
+                {% else %}
+                    ❌ Inactive
+                {% endif %}
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="5" class="text-center">No active admins found.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+

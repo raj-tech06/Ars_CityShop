@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Home - ARS CityShop{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="mb-3">Welcome to ARS CityShop</h1>
+    <p class="lead">Find and explore all shops in your city — easily and quickly.</p>
+    <a href="{% url 'shops' %}" class="btn btn-primary mt-3">Explore Shops</a>
+</div>
+
+<hr class="my-5">
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Shop 1">
+            <div class="card-body">
+                <h5 class="card-title">Local Grocery</h5>
+                <p class="card-text">Fresh fruits, vegetables, and daily essentials.</p>
+                <a href="#" class="btn btn-sm btn-outline-primary">View Details</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Shop 2">
+            <div class="card-body">
+                <h5 class="card-title">Clothing Store</h5>
+                <p class="card-text">Trendy clothes and accessories for all ages.</p>
+                <a href="#" class="btn btn-sm btn-outline-primary">View Details</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Shop 3">
+            <div class="card-body">
+                <h5 class="card-title">Electronics</h5>
+                <p class="card-text">Mobile phones, gadgets, and home appliances.</p>
+                <a href="#" class="btn btn-sm btn-outline-primary">View Details</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
